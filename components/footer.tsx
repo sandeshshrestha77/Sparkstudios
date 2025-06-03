@@ -1,161 +1,103 @@
 import Link from "next/link"
-import { Zap } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 export default function Footer() {
   return (
-    <footer className="bg-background border-t">
-      <div className="container py-12 md:py-16">
+    <footer className="bg-muted">
+      <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <Link href="/" className="flex items-center space-x-2">
-              <Zap className="h-6 w-6" />
-              <span className="inline-block font-bold text-xl">SparkStudios</span>
+            <Link href="/" className="text-2xl font-bold">
+              SparkStudios
             </Link>
-            <p className="text-muted-foreground text-sm">
-              SparkStudios is a creative agency based in Nepal, delivering cutting-edge IT services, design solutions,
-              and marketing strategies since 2025.
+            <p className="text-muted-foreground">
+              Creating innovative digital solutions that help businesses thrive in the modern world.
             </p>
           </div>
+          
           <div>
-            <h3 className="font-medium text-lg mb-4">Services</h3>
+            <h3 className="font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/services/it-solutions" className="text-sm text-muted-foreground hover:text-primary">
-                  IT Solutions
+                <Link href="/services/web-development" className="text-muted-foreground hover:text-primary transition-colors">
+                  Web Development
                 </Link>
               </li>
               <li>
-                <Link href="/services/design" className="text-sm text-muted-foreground hover:text-primary">
-                  Design Services
+                <Link href="/services/mobile-apps" className="text-muted-foreground hover:text-primary transition-colors">
+                  Mobile Apps
                 </Link>
               </li>
               <li>
-                <Link href="/services/marketing" className="text-sm text-muted-foreground hover:text-primary">
-                  Marketing Strategies
+                <Link href="/services/ui-design" className="text-muted-foreground hover:text-primary transition-colors">
+                  UI/UX Design
                 </Link>
               </li>
               <li>
-                <Link href="/services/consulting" className="text-sm text-muted-foreground hover:text-primary">
-                  Consulting
+                <Link href="/services/digital-marketing" className="text-muted-foreground hover:text-primary transition-colors">
+                  Digital Marketing
                 </Link>
               </li>
             </ul>
           </div>
+
           <div>
-            <h3 className="font-medium text-lg mb-4">Company</h3>
+            <h3 className="font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="text-sm text-muted-foreground hover:text-primary">
+                <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/portfolio" className="text-sm text-muted-foreground hover:text-primary">
-                  Portfolio
+                <Link href="/careers" className="text-muted-foreground hover:text-primary transition-colors">
+                  Careers
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-sm text-muted-foreground hover:text-primary">
+                <Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="/careers" className="text-sm text-muted-foreground hover:text-primary">
-                  Careers
+                <Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+                  Contact
                 </Link>
               </li>
             </ul>
           </div>
+
           <div>
-            <h3 className="font-medium text-lg mb-4">Contact</h3>
-            <ul className="space-y-2">
-              <li className="text-sm text-muted-foreground">Thamel, Kathmandu, Nepal</li>
-              <li className="text-sm text-muted-foreground">info@sparkstudios.np</li>
-              <li className="text-sm text-muted-foreground">+977 1 234 5678</li>
-            </ul>
-            <div className="flex space-x-4 mt-4">
-              <Link href="#" className="text-muted-foreground hover:text-primary">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                </svg>
-                <span className="sr-only">Facebook</span>
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-                <span className="sr-only">Instagram</span>
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
-                </svg>
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                  <rect x="2" y="9" width="4" height="12"></rect>
-                  <circle cx="4" cy="4" r="2"></circle>
-                </svg>
-                <span className="sr-only">LinkedIn</span>
-              </Link>
+            <h3 className="font-semibold mb-4">Connect</h3>
+            <div className="space-y-4">
+              <p className="text-muted-foreground">Stay updated with our latest news and updates.</p>
+              <form className="space-y-2">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="w-full px-4 py-2 rounded-md border bg-background"
+                />
+                <Button type="submit" className="w-full">
+                  Subscribe
+                </Button>
+              </form>
             </div>
           </div>
         </div>
-        <div className="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} SparkStudios. All rights reserved.
-          </p>
-          <div className="flex space-x-4 mt-4 md:mt-0">
-            <Link href="/privacy" className="text-sm text-muted-foreground hover:text-primary">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="text-sm text-muted-foreground hover:text-primary">
-              Terms of Service
-            </Link>
+
+        <div className="mt-12 pt-8 border-t border-border">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-muted-foreground">
+              © {new Date().getFullYear()} SparkStudios. All rights reserved.
+            </p>
+            <div className="flex space-x-6">
+              <Link href="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                Terms of Service
+              </Link>
+            </div>
           </div>
         </div>
       </div>
